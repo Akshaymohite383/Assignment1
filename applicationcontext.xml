@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="movie1" class="com.yash.springioc.Movie">
+		<property name="movieName">
+			<list>
+				<value>terenaam</value>
+				<value>singham</value>
+				<value>wanted</value>
+			</list>
+		</property>
+		<property name="movieTiming">
+			<list>
+				<value>9am to 11am</value>
+				<value>11am to 1pm</value>
+				<value>10am to 12pm</value>
+			</list>
+		</property>
+
+	</bean>
+	<bean id="cinemaHall1" class="com.yash.springioc.CinemaHall">
+		<property name="cinemaHallName">
+			<list>
+				<value>Vaibhav</value>
+				<value>Rahul</value>
+				<value>Mangala</value>
+			</list>
+		</property>
+		<property name="movie" ref="movie1"></property>
+	</bean>
+	
+	<bean id="city1" class="com.yash.springioc.City">
+		
+		<property name="cityname">
+			<list>
+				<value>Hadapsar</value>
+				<value>Pimpari</value>
+				<value>Shivajinagar</value>
+			</list>
+		</property>
+		<property name="cinemaHall" ref="cinemaHall1"></property>
+	</bean>
+</beans>
