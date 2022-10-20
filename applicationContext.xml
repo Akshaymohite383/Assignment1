@@ -1,26 +1,11 @@
-<?xml version = "1.0" encoding = "UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-	<bean id="rectangle"
-		class="com.yash.springioc2.Rectangle">
-		<property name="width" value="2.5" />
-		<property name="length" value="5.5" />
-	</bean>
-
-	<bean id="triangle" class="com.yash.springioc2.Triangle">
-		<property name="height" value="3.5" />
-		<property name="base" value="6.5" />
-	</bean>
-
-	<bean id="parallelogram"
-		class="com.yash.springioc2.Parallelogram">
-		<property name="base" value="4.5" />
-		<property name="height" value="7.5" />
-	</bean>
-
-
+<bean id ="message" class="com.yash.springIOCAssignment3.ConstructorMessage">
+<constructor-arg value="happy diwali to all"></constructor-arg>
+</bean>
 
 </beans>
