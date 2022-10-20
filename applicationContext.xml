@@ -4,8 +4,37 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-	<bean id="employee" class="com.yash.springiocassignment5.EmployeeFactory" factory-method="getEmployee">
-
-
+	<bean id="engine1" class="com.yash.springiocAssignment6.Engine">
+	<property name="engineType" value="Petrol engine"></property>
+	<property name="enginePower" value="125 BHP"></property>
+	<property name="engineName" value="150 cc"></property>
+	
 	</bean>
-</beans>
+	
+	<bean id="vehicle" class="com.yash.springiocAssignment6.Vehicle">
+		<property name="vehicleName" value="TOYOTA"></property>
+		<property name="vehicleType" value="FORTUNOR"></property>
+		<property name="vehicleEngine" value="125 BHP"></property>
+		<property name="vehicleMileage" value="15"></property>
+		<property name="vehiclePrice" value="600000"></property>
+		<property name="engine" ref="engine1"></property>
+		</bean>
+	
+		
+	<bean id="engine2" class="com.yash.springiocAssignment6.Engine">
+	<property name="engineType" value="Diesel engine"></property>
+	<property name="enginePower" value="1600 BHP"></property>
+	<property name="engineName" value="3500 cc"></property>
+	
+	</bean>
+	
+	<bean id="vehicle2" class="com.yash.springiocAssignment6.Vehicle">
+		<property name="vehicleName" value="Eisher Truck"></property>
+		<property name="vehicleType" value="Truck"></property>
+		<property name="vehicleEngine" value="1000 BHP"></property>
+		<property name="vehicleMileage" value="10"></property>
+		<property name="vehiclePrice" value="2000000"></property>
+		<property name="engine" ref="engine2"></property>
+		</bean>
+		
+		</beans>
