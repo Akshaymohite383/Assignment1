@@ -1,13 +1,13 @@
-package com.yash.springioc;
+package com.yash.springiocassignment5;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
 public static void main(String[] args) {
-	ApplicationContext context=new ClassPathXmlApplicationContext("applicationcontext.xml");
 	
-	City c=(City) context.getBean("city1");
-	c.show();		
+	ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+	Employee employee=(Employee) context.getBean("employee");
+	employee.display();
 }
 }

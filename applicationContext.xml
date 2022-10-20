@@ -4,7 +4,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-	<bean id="message1" class="com.yash.springIOCAssignment4.SetterMessage">
-		<property name="message" value="Enjoy your Life "></property>
-		</bean>
-		</beans>
+	<bean id="employee" class="com.yash.springiocassignment5.EmployeeFactory" factory-method="getEmployee">
+
+
+	</bean>
+</beans>
